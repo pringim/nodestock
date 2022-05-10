@@ -1,1 +1,21 @@
-<h1>This is my Handlebars Homepage ...</h1>
+<br/><br/>
+
+<div class="card" style="width: 70rem;">
+  <h1 class="card-header bg-success">{{ stock.companyName }} ({{ stock.symbol }})</h1>
+  <div class="card-body bg-success bg-opacity-25">
+    <h3 class="card-title"><strong>Latest Price: $</strong>{{stock.latestPrice }}</strong></h3>
+    <p class="card-text"><h5><strong>Previous Close: $</strong>{{stock.previousClose }}<br/>
+    <h5><strong>Change Percent: </strong>{{stock.changePercent }}%<br/>
+    <h5><strong>Market Cap: $</strong>{{stock.marketCap }}<br/>
+	<h5><strong>YTD Change: </strong>{{stock.ytdChange }}%<br/>
+	<h5><strong>Week52 High: $</strong>{{stock.week52High }}<br/>
+	<h5><strong>Week52 Low: $</strong>{{stock.week52Low }}</h5>
+    </p>
+  </div>
+</div>
+
+<!--
+{{#each stock}}
+	{{@key}} | {{this}}<br/>
+{{/each}}
+-->
